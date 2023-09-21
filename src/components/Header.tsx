@@ -9,75 +9,75 @@ export default function Header() {
         () => [
             { label: "Home", href: "/#" },
             { label: "About", href: "/#about" },
-            { label: "Expierence", href: "/#exp" },
+            { label: "Experience", href: "/#experience" },
             { label: "Projects", href: "/#projects" },
             { label: "Contact", href: "/#contact" },
         ],
-        []
+        [],
     )
     return (
-        <header className="w-full h-16 bg-red-500 drop-shadow-2xl border-b border-black fixed z-10 ">
-            <div className="h-full px-4 md:px-16 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-white drop-shadow-2xl shadow-black">
+        <header className="fixed z-10 h-16 w-full border-b border-black bg-red-500 drop-shadow-2xl ">
+            <div className="flex h-full items-center justify-between px-4 md:px-16">
+                <h1 className="text-2xl font-bold text-white shadow-black drop-shadow-2xl">
                     Ms Paley
                 </h1>
                 <nav className="h-full">
                     <button
                         onClick={() => setNavOpen((prevState) => !prevState)}
                         className={classNames(
-                            `flex flex-col gap-2 justify-center items-center h-full md:hidden`
+                            `flex h-full flex-col items-center justify-center gap-2 md:hidden`,
                         )}
                     >
                         <div
                             className={classNames(
-                                `w-8 h-1 bg-white rounded-full duration-500 ${
+                                `h-1 w-8 rounded-full bg-white duration-500 ${
                                     navOpen
-                                        ? "-rotate-[225deg] translate-y-3"
+                                        ? "translate-y-3 -rotate-[225deg]"
                                         : ""
                                 } ${
                                     disableAnimation
                                         ? "transition-none"
                                         : "transition-all"
-                                }`
+                                }`,
                             )}
                         ></div>
                         <div
                             className={classNames(
-                                `w-8 h-1 bg-white rounded-full duration-500  ${
+                                `h-1 w-8 rounded-full bg-white duration-500  ${
                                     navOpen
-                                        ? "opacity-100 translate-x-0 -rotate-[225deg]"
+                                        ? "translate-x-0 -rotate-[225deg] opacity-100"
                                         : ""
                                 } ${
                                     disableAnimation
                                         ? "transition-none"
                                         : "transition-all"
-                                }`
+                                }`,
                             )}
                         ></div>
                         <div
                             className={classNames(
-                                `w-8 h-1 bg-white rounded-full duration-500 ${
+                                `h-1 w-8 rounded-full bg-white duration-500 ${
                                     navOpen
-                                        ? "-rotate-[315deg] -translate-y-3"
+                                        ? "-translate-y-3 -rotate-[315deg]"
                                         : ""
                                 } ${
                                     disableAnimation
                                         ? "transition-none"
                                         : "transition-all"
-                                }`
+                                }`,
                             )}
                         ></div>
                     </button>
                     {/* MOBILE NAV */}
                     <div
                         className={classNames(
-                            `h-screen border-l border-black  right-0 top-16 bg-red-500 md:hidden overflow-hidden fixed z-10 ${
+                            `fixed right-0 top-16  z-10 h-screen overflow-hidden border-l border-black bg-red-500 md:hidden ${
                                 disableAnimation ? "" : "transition-all"
-                            } ${navOpen ? "w-[330px]" : "w-0 border-none"} `
+                            } ${navOpen ? "w-[330px]" : "w-0 border-none"} `,
                         )}
                         aria-hidden={!navOpen}
                     >
-                        <ul className="flex flex-col gap-2 w-full h-full">
+                        <ul className="flex h-full w-full flex-col gap-2">
                             {pages.map((page) => {
                                 return (
                                     <button
@@ -96,10 +96,10 @@ export default function Header() {
                             <button
                                 onClick={() =>
                                     setDisableAnimation(
-                                        (prevState) => !prevState
+                                        (prevState) => !prevState,
                                     )
                                 }
-                                className="justify-self-end h-10 w-full "
+                                className="h-10 w-full justify-self-end "
                             >
                                 {disableAnimation
                                     ? "Enable Animation"
@@ -108,7 +108,7 @@ export default function Header() {
                         </ul>
                     </div>
 
-                    <ul className="md:flex gap-2 h-full hidden">
+                    <ul className="hidden h-full gap-2 md:flex">
                         {pages.map((page) => {
                             return (
                                 <HeaderLink href={page.href}>

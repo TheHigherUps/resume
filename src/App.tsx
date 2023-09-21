@@ -75,7 +75,7 @@ function App() {
                 </section>
                 <section
                     className=" bg-[#272932] px-5 py-10 text-white md:px-20"
-                    id="exp"
+                    id="experience"
                 >
                     <div className="text-4xl">Experience and Skills</div>
                     <br />
@@ -155,7 +155,7 @@ function App() {
                         repellat beatae aliquid nulla. Distinctio, nostrum?
                     </p>
                     <br />
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5" id="main-skills">
                         <p className="text-2xl">Main Skills</p>
                         <hr />
                         <div className="flex w-full items-center">
