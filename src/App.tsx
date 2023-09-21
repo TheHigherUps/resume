@@ -26,9 +26,9 @@ function App() {
                     </div>
                     <div className="text-white ">
                         {/* <p className="text-xl md:text-5xl">Alexandria Paley</p> */}
-                        <p className="text-xl md:text-5xl">Lorem, ipsum.</p>
+                        <p className="text-3xl md:text-5xl">Lorem, ipsum.</p>
                         <br />
-                        <p className="md:text-xl">
+                        <p className="text-lg leading-10 md:text-xl">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Alias ex, atque saepe odio fugiat enim earum
                             dolore nisi reprehenderit totam accusamus voluptas
@@ -37,7 +37,10 @@ function App() {
                         </p>
                     </div>
                 </section>
-                <section className="px-5 py-10 md:px-20" id="about">
+                <section
+                    className="flex min-h-screen flex-col justify-center px-5 py-10 md:px-20"
+                    id="about"
+                >
                     {/* <div className="text-red-500 text-4xl">About Me</div> */}
                     <div className="text-4xl text-red-500">Quasi, placeat</div>
                     <br />
@@ -162,7 +165,11 @@ function App() {
                             <RiHtml5Fill size={54} />
                             <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "95%" }}
@@ -178,7 +185,11 @@ function App() {
                             <RiJavascriptFill size={54} />
                             <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "80%" }}
@@ -191,7 +202,11 @@ function App() {
                             <RiCss3Fill size={54} />
                             <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "75%" }}
@@ -204,7 +219,11 @@ function App() {
                             <RiReactjsFill size={54} />
                             <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "60%" }}
@@ -217,7 +236,11 @@ function App() {
                             <BiLogoTypescript size={54} />
                             <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "50%" }}
@@ -230,7 +253,11 @@ function App() {
                             <BiLogoJava size={54} />
                             <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "11%" }}
@@ -245,7 +272,11 @@ function App() {
                             <RiAngularjsFill size={54} />
                             <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
-                                    transition={{ delay: 0.25 }}
+                                    transition={{
+                                        delay: 0.25,
+                                        type: "spring",
+                                        bounce: 0.25,
+                                    }}
                                     className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "5%" }}
