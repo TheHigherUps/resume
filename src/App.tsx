@@ -15,12 +15,12 @@ function App() {
             <Header />
             <main className="h-screen pt-16 ">
                 <section
-                    className="bg-[#272932] py-16 px-10 md:px-32 md:py-32 flex flex-col md:flex-row md:justify-evenly items-center gap-5 h-screen"
+                    className="flex h-screen flex-col items-center gap-5 bg-[#272932] px-10 py-16 md:flex-row md:justify-evenly md:px-32 md:py-32"
                     id="home"
                 >
-                    <div className="min-w-fit min-h-fit">
+                    <div className="min-h-fit min-w-fit">
                         <img
-                            className="w-36 h-36 md:w-64 md:h-64 rounded-full border-8 border-red-500 "
+                            className="h-36 w-36 rounded-full border-8 border-red-500 md:h-64 md:w-64 "
                             src="./paley.webp"
                         />
                     </div>
@@ -37,9 +37,9 @@ function App() {
                         </p>
                     </div>
                 </section>
-                <section className="px-5 md:px-20 py-10" id="about">
+                <section className="px-5 py-10 md:px-20" id="about">
                     {/* <div className="text-red-500 text-4xl">About Me</div> */}
-                    <div className="text-red-500 text-4xl">Quasi, placeat</div>
+                    <div className="text-4xl text-red-500">Quasi, placeat</div>
                     <br />
                     <p className="text-lg leading-10">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -74,16 +74,16 @@ function App() {
                     </p>
                 </section>
                 <section
-                    className=" px-5 md:px-20 py-10 bg-[#272932] text-white"
+                    className=" bg-[#272932] px-5 py-10 text-white md:px-20"
                     id="exp"
                 >
-                    <div className=" text-4xl">Experience and Skills</div>
+                    <div className="text-4xl">Experience and Skills</div>
                     <br />
-                    <div className="grid gap-y-32 grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 place-items-center">
+                    <div className="grid grid-cols-2 grid-rows-3 place-items-center gap-y-32 md:grid-cols-3 md:grid-rows-2">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
+                            transition={{ duration: 0.5, delay: 0 }}
                         >
                             <RiJavascriptFill
                                 className="text-[#f7df1e]"
@@ -93,7 +93,7 @@ function App() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 0.5, delay: 0.25 }}
                         >
                             <BiLogoTypescript
                                 className="text-[#007acc]"
@@ -103,17 +103,38 @@ function App() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.5 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1.5 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
                         >
                             <RiHtml5Fill className="text-[#e34c26]" size={64} />
                         </motion.div>
-                        <RiCss3Fill className="text-[#04a4ef]" size={64} />
-                        <RiReactjsFill
-                            size={64}
-                            className="animate-react text-[#3a87cb]"
-                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 0.75 }}
+                        >
+                            <RiCss3Fill className="text-[#04a4ef]" size={64} />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1 }}
+                        >
+                            <RiReactjsFill
+                                size={64}
+                                className="animate-react text-[#3a87cb]"
+                            />
+                        </motion.div>
 
-                        <RiAngularjsFill className="text-[#dd1b16]" size={64} />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 1.25 }}
+                        >
+                            <RiAngularjsFill
+                                className="text-[#dd1b16]"
+                                size={64}
+                            />
+                        </motion.div>
                         {/* from #d0433f - to #a73a37 */}
                     </div>
                     <br />
@@ -139,10 +160,10 @@ function App() {
                         <hr />
                         <div className="flex w-full items-center">
                             <RiHtml5Fill size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
+                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "95%" }}
                                 >
@@ -155,10 +176,10 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <RiJavascriptFill size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
+                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "80%" }}
                                 >
@@ -168,10 +189,10 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <RiCss3Fill size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
+                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "75%" }}
                                 >
@@ -181,10 +202,10 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <RiReactjsFill size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
+                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "60%" }}
                                 >
@@ -194,10 +215,10 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <BiLogoTypescript size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700">
+                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "50%" }}
                                 >
@@ -207,14 +228,14 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <BiLogoJava size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700 relative">
+                            <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "11%" }}
                                 >
-                                    <p className="ffloat-right mx-3 absolute inset-0">
+                                    <p className="ffloat-right absolute inset-0 mx-3">
                                         11% (Just Learning)
                                     </p>
                                 </motion.div>
@@ -222,14 +243,14 @@ function App() {
                         </div>
                         <div className="flex w-full items-center">
                             <RiAngularjsFill size={54} />
-                            <div className="w-full bg-gray-200 rounded-full h-5 dark:bg-gray-700 relative">
+                            <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                 <motion.div
                                     transition={{ delay: 0.25 }}
-                                    className="bg-blue-600 h-5 rounded-full"
+                                    className="h-5 rounded-full bg-blue-600"
                                     style={{ width: "0" }}
                                     whileInView={{ width: "5%" }}
                                 >
-                                    <p className="ffloat-right mx-3 absolute inset-0">
+                                    <p className="ffloat-right absolute inset-0 mx-3">
                                         5% (Just Learning)
                                     </p>
                                 </motion.div>
@@ -242,9 +263,9 @@ function App() {
                         </div>
                         <br />
                         <div>
-                            <p className="text-2xl mb-5">Other Skills</p>
+                            <p className="mb-5 text-2xl">Other Skills</p>
                             <hr />
-                            <ul className="list-disc leading-10 gap-5 grid grid-cols-2 auto-rows-auto text-xl">
+                            <ul className="grid list-disc auto-rows-auto grid-cols-2 gap-5 text-xl leading-10">
                                 <li>Accessible Web Design</li>
                                 <li>Apache</li>
                                 <li>Cybersecurity</li>
@@ -276,10 +297,10 @@ function App() {
                     </div>
                 </section>
                 <section
-                    className=" px-5 md:px-20 py-10 bg-white text-black"
+                    className=" bg-white px-5 py-10 text-black md:px-20"
                     id="projects"
                 >
-                    <p className="text-red-500 text-4xl">Projects</p>
+                    <p className="text-4xl text-red-500">Projects</p>
                     <hr className="my-5" />
                     <div>
                         <div className="text-3xl">TheHigherUps</div>
@@ -304,13 +325,13 @@ function App() {
                         </p>
                         <div className="flex gap-5">
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="https://www.thehigherups.org"
                             >
                                 -Link
                             </a>
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="https://www.thehigherups.org"
                             >
                                 -Github
@@ -336,13 +357,13 @@ function App() {
                         </p>
                         <div className="flex gap-5">
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="/projects"
                             >
                                 -Preview
                             </a>
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="/projects"
                             >
                                 -Github
@@ -366,13 +387,13 @@ function App() {
                         </p>
                         <div className="flex gap-5">
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="/#projects"
                             >
                                 -Preview
                             </a>
                             <a
-                                className="underline text-blue-600"
+                                className="text-blue-600 underline"
                                 href="/#projects"
                             >
                                 -Github
@@ -381,49 +402,49 @@ function App() {
                     </div>
                 </section>
                 <section
-                    className=" px-5 md:px-20 py-10 bg-[#272932] text-white flex flex-col gap-5"
+                    className=" flex flex-col gap-5 bg-[#272932] px-5 py-10 text-white md:px-20"
                     id="contact"
                 >
-                    <div className="text-4xl text-center">Contact</div>
-                    <p className="w-96 mx-auto mb-5">
+                    <div className="text-center text-4xl">Contact</div>
+                    <p className="mx-auto mb-5 w-96">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Ex, magnam. Rem natus facilis magni quidem alias
                         deleniti repellat. Vitae omnis assumenda modi nesciunt
                         architecto voluptate?
                     </p>
-                    <form className="flex flex-col gap-10 md:w-96 md:mx-auto text-black ">
+                    <form className="flex flex-col gap-10 text-black md:mx-auto md:w-96 ">
                         <div className="relative">
                             <input
-                                className="px-4 py-3  rounded-lg w-full peer"
+                                className="peer w-full  rounded-lg px-4 py-3"
                                 required
                             />
                             <label
                                 htmlFor=""
-                                className="text-xl absolute inset-0 pointer-events-none top-[-75%]  pl-2 text-white peer-focus:top-[-75%] peer-focus:text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black"
+                                className="pointer-events-none absolute inset-0 top-[-75%] pl-2  text-xl text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black peer-focus:top-[-75%] peer-focus:text-white"
                             >
                                 Name
                             </label>
                         </div>
                         <div className="relative">
                             <input
-                                className="px-4 py-3  rounded-lg w-full peer"
+                                className="peer w-full  rounded-lg px-4 py-3"
                                 required
                             />
                             <label
                                 htmlFor=""
-                                className="text-xl absolute inset-0 pointer-events-none top-[-75%]  pl-2 text-white peer-focus:top-[-75%] peer-focus:text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black"
+                                className="pointer-events-none absolute inset-0 top-[-75%] pl-2  text-xl text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black peer-focus:top-[-75%] peer-focus:text-white"
                             >
                                 Email
                             </label>
                         </div>
                         <div className="relative">
                             <input
-                                className="px-4 py-3  rounded-lg w-full peer"
+                                className="peer w-full  rounded-lg px-4 py-3"
                                 required
                             />
                             <label
                                 htmlFor=""
-                                className="text-xl absolute inset-0 pointer-events-none top-[-75%]  pl-2 text-white peer-focus:top-[-75%] peer-focus:text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black"
+                                className="pointer-events-none absolute inset-0 top-[-75%] pl-2  text-xl text-white transition-all peer-invalid:top-1/4 peer-invalid:text-black peer-focus:top-[-75%] peer-focus:text-white"
                             >
                                 Message
                             </label>
@@ -432,7 +453,7 @@ function App() {
                             <input type="checkbox" id="captcha" />
                             <label htmlFor="captcha">i am not the robots</label>
                         </div>
-                        <button className="bg-red-500 text-white rounded-lg px-4 py-3 hover:-translate-y-1 active:translate-y-1 transition-transform">
+                        <button className="rounded-lg bg-red-500 px-4 py-3 text-white transition-transform hover:-translate-y-1 active:translate-y-1">
                             Send!
                         </button>
                     </form>
