@@ -5,15 +5,34 @@ import classNames from "classnames"
 export default function Header() {
     const [navOpen, setNavOpen] = useState(false)
     const [disableAnimation, setDisableAnimation] = useState(false)
+    function getHash() {
+        if (window.location.hash) {
+            return window.location.hash
+        } else {
+            return "#"
+        }
+    }
     const pages = useMemo(
         () => [
-            { label: "Home", href: "/#" },
-            { label: "About", href: "/#about" },
-            { label: "Experience", href: "/#experience" },
-            { label: "Projects", href: "/#projects" },
-            { label: "Contact", href: "/#contact" },
+            { label: "Home", href: "/#", active: getHash() === "#" },
+            { label: "About", href: "/#about", active: getHash() === "#about" },
+            {
+                label: "Experience",
+                href: "/#experience",
+                active: getHash() === "#experience",
+            },
+            {
+                label: "Projects",
+                href: "/#projects",
+                active: getHash() === "#projects",
+            },
+            {
+                label: "Contact",
+                href: "/#contact",
+                active: getHash() === "#contact",
+            },
         ],
-        [],
+        [window.location.hash, getHash],
     )
     return (
         <header className="fixed z-10 h-16 w-full border-b border-black bg-red-500 drop-shadow-2xl ">
@@ -111,7 +130,10 @@ export default function Header() {
                     <ul className="hidden h-full gap-2 md:flex">
                         {pages.map((page) => {
                             return (
-                                <HeaderLink href={page.href}>
+                                <HeaderLink
+                                    href={page.href}
+                                    active={page.active}
+                                >
                                     {page.label}
                                 </HeaderLink>
                             )

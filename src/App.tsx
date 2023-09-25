@@ -6,8 +6,9 @@ import {
     RiCss3Fill,
     RiAngularjsFill,
 } from "react-icons/ri"
-import { BiLogoTypescript, BiLogoJava } from "react-icons/bi"
+import { BiLogoTypescript } from "react-icons/bi"
 import { motion } from "framer-motion"
+import { mainSkills } from "./lib/data"
 
 function App() {
     return (
@@ -161,137 +162,37 @@ function App() {
                     <div className="flex flex-col gap-5" id="main-skills">
                         <p className="text-2xl">Main Skills</p>
                         <hr />
-                        <div className="flex w-full items-center">
-                            <RiHtml5Fill size={54} />
-                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "95%" }}
-                                >
-                                    <p className="float-right mx-3">95%</p>
-                                </motion.div>
-                                {/* <div className="bg-blue-600 h-5 rounded-full w-[95%]">
+                        {/*  */}
+                        {mainSkills.map((skill, index) => {
+                            return (
+                                <div className="flex w-full items-center">
+                                    <skill.icon size={54} />
+                                    <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+                                        <motion.div
+                                            transition={{
+                                                delay: 0.05 * index,
+                                                type: "spring",
+                                                bounce: 0.25,
+                                            }}
+                                            className="h-5 rounded-full bg-blue-600"
+                                            initial={{ width: 0 }}
+                                            whileInView={{
+                                                width: `${skill.percentage}`,
+                                            }}
+                                            viewport={{ once: true }}
+                                        >
+                                            <p className="float-right mx-3">
+                                                {skill.percentage}
+                                            </p>
+                                        </motion.div>
+                                        {/* <div className="bg-blue-600 h-5 rounded-full w-[95%]">
                                     <p className="float-right mx-3">95%</p>
                                 </div> */}
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <RiJavascriptFill size={54} />
-                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "80%" }}
-                                >
-                                    <p className="float-right mx-3">80%</p>
-                                </motion.div>
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <RiCss3Fill size={54} />
-                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "75%" }}
-                                >
-                                    <p className="float-right mx-3">75%</p>
-                                </motion.div>
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <RiReactjsFill size={54} />
-                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "60%" }}
-                                >
-                                    <p className="float-right mx-3">60%</p>
-                                </motion.div>
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <BiLogoTypescript size={54} />
-                            <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "50%" }}
-                                >
-                                    <p className="float-right mx-3">50%</p>
-                                </motion.div>
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <BiLogoJava size={54} />
-                            <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "11%" }}
-                                >
-                                    <p className="ffloat-right absolute inset-0 mx-3">
-                                        11% (Just Learning)
-                                    </p>
-                                </motion.div>
-                            </div>
-                        </div>
-                        <div className="flex w-full items-center">
-                            <RiAngularjsFill size={54} />
-                            <div className="relative h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-                                <motion.div
-                                    transition={{
-                                        delay: 0.25,
-                                        type: "spring",
-                                        bounce: 0.25,
-                                    }}
-                                    className="h-5 rounded-full bg-blue-600"
-                                    style={{ width: "0" }}
-                                    whileInView={{ width: "5%" }}
-                                >
-                                    <p className="ffloat-right absolute inset-0 mx-3">
-                                        5% (Just Learning)
-                                    </p>
-                                </motion.div>
-                                {/* <div className="bg-blue-600 h-5 rounded-full w-[5%] "> */}
-                                {/* <p className="float-right mx-3 absolute inset-0">
-                                        5% (Just Learning)
-                                    </p>
-                                </div> */}
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
+
                         <br />
                         <div>
                             <p className="mb-5 text-2xl">Other Skills</p>
