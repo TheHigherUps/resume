@@ -238,33 +238,45 @@ function App() {
                     <hr className="my-5" />
                     {projects.map((project, index) => {
                         return (
-                            <Card key={index}>
-                                <div className="text-3xl">{project.title}</div>
-                                <p className="text-lg text-gray-500">
-                                    {project.subtitle}
-                                </p>
-                                <p className="leading-10">
-                                    {project.description}
-                                </p>
-                                <div className="flex gap-2">
-                                    {project.tags.map((tag, index) => {
-                                        return <Chip key={index} text={tag} />
-                                    })}
-                                </div>
-                                <div className="flex gap-5">
-                                    {project.links.map((link, index) => {
-                                        return (
-                                            <a
-                                                key={index}
-                                                className="text-blue-600 underline"
-                                                href={link.href}
-                                            >
-                                                {link.title}
-                                            </a>
-                                        )
-                                    })}
-                                </div>
-                            </Card>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.05 * index }}
+                                viewport={{ once: true }}
+                            >
+                                <br />
+                                <Card key={index}>
+                                    <div className="text-3xl">
+                                        {project.title}
+                                    </div>
+                                    <p className="text-lg text-gray-500">
+                                        {project.subtitle}
+                                    </p>
+                                    <p className="leading-10">
+                                        {project.description}
+                                    </p>
+                                    <div className="my-2 flex gap-2">
+                                        {project.tags.map((tag, index) => {
+                                            return (
+                                                <Chip key={index} text={tag} />
+                                            )
+                                        })}
+                                    </div>
+                                    <div className="flex gap-5">
+                                        {project.links.map((link, index) => {
+                                            return (
+                                                <a
+                                                    key={index}
+                                                    className="rounded-lg p-3 text-blue-700 underline duration-500 hover:bg-blue-50 active:bg-blue-200"
+                                                    href={link.href}
+                                                >
+                                                    {link.title}
+                                                </a>
+                                            )
+                                        })}
+                                    </div>
+                                </Card>
+                            </motion.div>
                         )
                     })}
                 </section>
