@@ -18,7 +18,7 @@ function App() {
             <Header />
             <main className="h-screen pt-16 ">
                 <section
-                    className="flex h-screen flex-col items-center gap-5 bg-[#272932] px-10 py-16 md:flex-row md:justify-evenly md:px-32 md:py-32"
+                    className="flex min-h-screen flex-col items-center gap-5 bg-[#272932] px-10 py-16 md:flex-row md:justify-evenly md:px-32 md:py-32"
                     id="home"
                 >
                     <div className="min-h-fit min-w-fit">
@@ -285,7 +285,7 @@ function App() {
                     id="contact"
                 >
                     <div className="text-center text-4xl">Contact</div>
-                    <p className="mx-auto mb-5 w-96">
+                    <p className="mx-auto mb-5 text-center sm:w-96">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Ex, magnam. Rem natus facilis magni quidem alias
                         deleniti repellat. Vitae omnis assumenda modi nesciunt

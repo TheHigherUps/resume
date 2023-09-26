@@ -64,11 +64,11 @@ export const projects = [
         links: [
             {
                 title: "Github",
-                href: "#",
+                href: "#projects",
             },
             {
                 title: "Preview",
-                href: "#",
+                href: "#projects",
             },
         ],
     },
@@ -90,11 +90,11 @@ export const projects = [
         links: [
             {
                 title: "Github",
-                href: "#",
+                href: "#projects",
             },
             {
                 title: "Preview",
-                href: "#",
+                href: "#projects",
             },
         ],
     },
@@ -114,11 +114,11 @@ export const projects = [
         links: [
             {
                 title: "Github",
-                href: "#",
+                href: "#projects",
             },
             {
                 title: "Preview",
-                href: "#",
+                href: "#projects",
             },
         ],
     },
