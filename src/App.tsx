@@ -267,7 +267,7 @@ function App() {
                                             return (
                                                 <a
                                                     key={index}
-                                                    className="rounded-lg p-3 text-blue-700 underline duration-500 hover:bg-blue-50 active:bg-blue-200"
+                                                    className="rounded-lg p-3 text-blue-700 underline duration-200 hover:bg-blue-50 active:bg-blue-200"
                                                     href={link.href}
                                                 >
                                                     {link.title}
