@@ -8,7 +8,7 @@ import {
 } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi"
 import { motion } from "framer-motion"
-import { mainSkills } from "./lib/data"
+import { mainSkills, projects } from "./lib/data"
 import Card from "./components/Card"
 import Chip from "./components/Chip"
 
@@ -236,109 +236,37 @@ function App() {
                 >
                     <p className="text-4xl text-red-500">Projects</p>
                     <hr className="my-5" />
-                    <Card>
-                        <div className="text-3xl">TheHigherUps</div>
-                        <p className="text-lg text-gray-500">2019 - now</p>
-                        <p className="leading-10">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Fugiat quas ipsam cum placeat, animi quod
-                            quasi libero tempore accusantium id in, error esse
-                            unde quos doloribus provident veniam repudiandae
-                            magnam ratione, sint fuga eos. Pariatur laboriosam
-                            mollitia velit, earum molestias, consectetur impedit
-                            deleniti quam cumque quasi quidem! Veniam voluptates
-                            ullam voluptatum maxime labore. Nesciunt nemo earum
-                            doloremque eligendi ratione repellendus sed, commodi
-                            praesentium! Doloremque, consequuntur. Consequuntur
-                            molestias rerum exercitationem blanditiis commodi
-                            optio itaque dicta hic ex labore quaerat molestiae
-                            dolorem et ullam ad, quisquam necessitatibus odio
-                            officiis. Distinctio laborum aperiam expedita quas
-                            animi ratione! Neque illum explicabo quas libero
-                            exercitationem!
-                        </p>
-                        <div className="flex gap-5">
-                            <a
-                                className="text-blue-600 underline"
-                                href="https://www.thehigherups.org"
-                            >
-                                -Link
-                            </a>
-                            <a
-                                className="text-blue-600 underline"
-                                href="https://www.thehigherups.org"
-                            >
-                                -Github
-                            </a>
-                        </div>
-                    </Card>
-                    <br />
-                    <Card>
-                        <div className="text-3xl">Firebase Admin Panel</div>
-                        <div className="text-lg text-gray-500">2022</div>
-                        <p className="leading-10">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Vero iure pariatur eaque veniam doloremque
-                            quam, natus nihil laboriosam asperiores. Ea ab
-                            laboriosam sit quia est sequi delectus dolorum
-                            deserunt praesentium unde fugit impedit commodi
-                            consequuntur magnam numquam molestias ad, modi
-                            optio! Omnis, similique dicta totam, nesciunt
-                            perspiciatis nulla quam esse nostrum minus a tempore
-                            rerum dolore enim. Porro veritatis ipsum labore
-                            consequatur, dicta est fuga numquam maxime corporis
-                            totam ipsa nesciunt omnis sapiente tempora voluptas!
-                        </p>
-                        <div className="flex gap-2">
-                            <Chip text="Firebase" />
-                            <Chip text="MaterialUI" />
-                            <Chip text="React" />
-                        </div>
-                        <div className="flex gap-5">
-                            <a
-                                className="text-blue-600 underline"
-                                href="/projects"
-                            >
-                                -Preview
-                            </a>
-                            <a
-                                className="text-blue-600 underline"
-                                href="/projects"
-                            >
-                                -Github
-                            </a>
-                        </div>
-                    </Card>
-                    <br />
-                    <Card>
-                        <div className="text-3xl">Calendar</div>
-                        <div className="text-xl text-gray-500">2023</div>
-                        <p className="leading-10">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Adipisci repellendus eligendi laboriosam
-                            voluptatum inventore harum officiis aliquid debitis
-                            deleniti laudantium, suscipit voluptate dolorem
-                            iure! Odit illo perferendis velit animi dignissimos
-                            officia quas aliquid quia doloribus asperiores,
-                            omnis adipisci aliquam aperiam, quam praesentium
-                            cumque commodi voluptas magnam ad maxime assumenda
-                            sit.
-                        </p>
-                        <div className="flex gap-5">
-                            <a
-                                className="text-blue-600 underline"
-                                href="/#projects"
-                            >
-                                -Preview
-                            </a>
-                            <a
-                                className="text-blue-600 underline"
-                                href="/#projects"
-                            >
-                                -Github
-                            </a>
-                        </div>
-                    </Card>
+                    {projects.map((project, index) => {
+                        return (
+                            <Card key={index}>
+                                <div className="text-3xl">{project.title}</div>
+                                <p className="text-lg text-gray-500">
+                                    {project.subtitle}
+                                </p>
+                                <p className="leading-10">
+                                    {project.description}
+                                </p>
+                                <div className="flex gap-2">
+                                    {project.tags.map((tag, index) => {
+                                        return <Chip key={index} text={tag} />
+                                    })}
+                                </div>
+                                <div className="flex gap-5">
+                                    {project.links.map((link, index) => {
+                                        return (
+                                            <a
+                                                key={index}
+                                                className="text-blue-600 underline"
+                                                href={link.href}
+                                            >
+                                                {link.title}
+                                            </a>
+                                        )
+                                    })}
+                                </div>
+                            </Card>
+                        )
+                    })}
                 </section>
                 <section
                     className=" flex flex-col gap-5 bg-[#272932] px-5 py-10 text-white md:px-20"
