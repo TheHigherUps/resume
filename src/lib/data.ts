@@ -86,6 +86,8 @@ export const projects = [
         rerum dolore enim. Porro veritatis ipsum labore
         consequatur, dicta est fuga numquam maxime corporis
         totam ipsa nesciunt omnis sapiente tempora voluptas!`,
+        // description:
+        //     "Create, Delete and Manage users and global settings of your Firebase project with this self-hosted solution. Create your own custom settings on top of the base settings. Comes default with user lookup, user banning, ability to add custom user roles with special presets. ",
         tags: ["Firebase", "MaterialUI", "React"],
         links: [
             {
