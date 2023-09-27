@@ -167,7 +167,10 @@ function App() {
                         {/*  */}
                         {mainSkills.map((skill, index) => {
                             return (
-                                <div className="flex w-full items-center">
+                                <div
+                                    className="flex w-full items-center"
+                                    key={index}
+                                >
                                     <skill.icon size={54} />
                                     <div className="h-5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                                         <motion.div
@@ -239,6 +242,7 @@ function App() {
                     {projects.map((project, index) => {
                         return (
                             <motion.div
+                                key={index}
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.05 * index }}
