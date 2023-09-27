@@ -128,9 +128,10 @@ export default function Header() {
                     </div>
 
                     <ul className="hidden h-full gap-2 md:flex">
-                        {pages.map((page) => {
+                        {pages.map((page, index) => {
                             return (
                                 <HeaderLink
+                                    key={index}
                                     href={page.href}
                                     active={page.active}
                                 >
