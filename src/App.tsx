@@ -11,6 +11,7 @@ import { motion } from "framer-motion"
 import { mainSkills, projects } from "./lib/data"
 import Card from "./components/Card"
 import Chip from "./components/Chip"
+import Footer from "./components/Footer"
 
 function App() {
     return (
@@ -341,6 +342,7 @@ function App() {
                         </button>
                     </form>
                 </section>
+                {/* <Footer /> */}
             </main>
         </>
     )
