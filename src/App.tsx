@@ -342,7 +342,7 @@ function App() {
                         </button>
                     </form>
                 </section>
-                {/* <Footer /> */}
+                <Footer />
             </main>
         </>
     )
