@@ -14,6 +14,7 @@ export default function ContactForm(props: ContactFormProps) {
             <form className="flex flex-col gap-10 text-black md:mx-auto md:w-96 ">
                 <div className="relative">
                     <input
+                        id="name"
                         className="peer w-full  rounded-lg px-4 py-3"
                         required
                     />
@@ -26,6 +27,7 @@ export default function ContactForm(props: ContactFormProps) {
                 </div>
                 <div className="relative">
                     <input
+                        id="email"
                         className="peer w-full  rounded-lg px-4 py-3"
                         required
                     />
@@ -38,6 +40,7 @@ export default function ContactForm(props: ContactFormProps) {
                 </div>
                 <div className="relative">
                     <input
+                        id="message"
                         className="peer w-full  rounded-lg px-4 py-3"
                         required
                     />
@@ -52,7 +55,10 @@ export default function ContactForm(props: ContactFormProps) {
                     <input type="checkbox" id="captcha" />
                     <label htmlFor="captcha">i am not the robots</label>
                 </div>
-                <button className="rounded-lg bg-red-500 px-4 py-3 text-white transition-transform hover:-translate-y-1 active:translate-y-1">
+                <button
+                    type="submit"
+                    className="rounded-lg bg-red-500 px-4 py-3 text-white transition-transform hover:-translate-y-1 active:translate-y-1"
+                >
                     Send!
                 </button>
             </form>
