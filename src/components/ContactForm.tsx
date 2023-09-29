@@ -1,5 +1,5 @@
-import { BsCheck } from "react-icons/bs"
-import { TextField } from "./inputs"
+// import { BsCheck } from "react-icons/bs"
+// import { TextField } from "./inputs"
 
 type ContactFormProps = {}
 
