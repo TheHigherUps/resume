@@ -275,6 +275,7 @@ function App() {
                                                     key={index}
                                                     className="rounded-lg p-3 text-blue-700 underline duration-200 hover:bg-blue-50 active:bg-blue-200"
                                                     href={link.href}
+                                                    target="_blank"
                                                 >
                                                     {link.title}
                                                 </a>
