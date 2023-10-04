@@ -8,7 +8,7 @@ import {
 } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi"
 import { motion } from "framer-motion"
-import { mainSkills, projects } from "./lib/data"
+import { OTHER_SKILLS, mainSkills, projects } from "./lib/data"
 import Card from "./components/Card"
 import Chip from "./components/Chip"
 import Footer from "./components/Footer"
@@ -205,7 +205,23 @@ function App() {
                             <p className="mb-5 text-2xl">Other Skills</p>
                             <hr />
                             <ul className="grid list-disc auto-rows-auto grid-cols-2 gap-5 text-xl leading-10">
-                                <li>Accessible Web Design</li>
+                                {OTHER_SKILLS.map((skill, index) => {
+                                    return (
+                                        <motion.li
+                                            key={index}
+                                            initial={{ opacity: 0, scale: 0.5 }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                scale: 1,
+                                            }}
+                                            transition={{ delay: 0.05 * index }}
+                                            viewport={{ once: true }}
+                                        >
+                                            {skill}
+                                        </motion.li>
+                                    )
+                                })}
+                                {/* <li>Accessible Web Design</li>
                                 <li>Apache</li>
                                 <li>Cybersecurity</li>
                                 <li>Electron</li>
@@ -230,7 +246,7 @@ function App() {
                                 <li>Supabase</li>
                                 <li>TailwindCSS</li>
                                 <li>UI/UX Design</li>
-                                <li>Vercel</li>
+                                <li>Vercel</li> */}
                             </ul>
                         </div>
                     </div>
