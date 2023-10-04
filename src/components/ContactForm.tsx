@@ -70,7 +70,7 @@ export default function ContactForm(props: ContactFormProps) {
                 >
                     Send!
                 </button>
-                <label htmlFor="tolve">asdasd</label>
+                {/* <label htmlFor="tolve">asdasd</label> */}
             </form>
         </>
     )
