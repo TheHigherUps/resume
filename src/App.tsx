@@ -24,22 +24,37 @@ function App() {
                     id="home"
                 >
                     <div className="min-h-fit min-w-fit">
-                        <img
-                            className="h-36 w-36 rounded-full border-8 border-red-500 md:h-64 md:w-64 "
+                        <motion.img
+                            initial={{ scale: 0.5 }}
+                            animate={{ scale: 1 }}
+                            transition={{ type: "spring", bounce: 0.75 }}
+                            className="h-44 w-44 rounded-full border-8 border-red-500 md:h-64 md:w-64 "
                             src="./paley.webp"
                         />
                     </div>
                     <div className="text-white ">
                         {/* <p className="text-xl md:text-5xl">Alexandria Paley</p> */}
-                        <p className="text-3xl md:text-5xl">Lorem, ipsum.</p>
+                        <motion.p
+                            initial={{ x: 250, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            className="text-3xl md:text-5xl"
+                            transition={{ delay: 0.25 }}
+                        >
+                            Lorem, ipsum.
+                        </motion.p>
                         <br />
-                        <p className="text-lg leading-10 md:text-xl">
+                        <motion.p
+                            initial={{ y: 250, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                            className="text-lg leading-10 md:text-xl"
+                        >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Alias ex, atque saepe odio fugiat enim earum
                             dolore nisi reprehenderit totam accusamus voluptas
                             aliquid ducimus iure doloribus recusandae fugit non!
                             Officiis!
-                        </p>
+                        </motion.p>
                     </div>
                 </section>
                 <section
