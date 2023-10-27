@@ -37,9 +37,16 @@ export default function Header() {
     return (
         <header className="fixed z-10 h-16 w-full border-b border-black bg-red-500 drop-shadow-2xl ">
             <div className="flex h-full items-center justify-between px-4 md:px-16">
-                <h1 className="text-2xl font-bold text-white shadow-black drop-shadow-2xl">
+                {/* <h1 className="text-2xl font-bold text-white shadow-black drop-shadow-2xl">
                     Layne Rigano
-                </h1>
+                </h1> */}
+                <div className="h-full w-0 p-0 text-2xl">
+                    <svg className="h-full w-36">
+                        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                            Layne Rigano
+                        </text>
+                    </svg>
+                </div>
                 <nav className="h-full">
                     <button
                         onClick={() => setNavOpen((prevState) => !prevState)}
