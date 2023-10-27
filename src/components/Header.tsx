@@ -38,7 +38,7 @@ export default function Header() {
         <header className="fixed z-10 h-16 w-full border-b border-black bg-red-500 drop-shadow-2xl ">
             <div className="flex h-full items-center justify-between px-4 md:px-16">
                 <h1 className="text-2xl font-bold text-white shadow-black drop-shadow-2xl">
-                    Ms Paley
+                    Layne Rigano
                 </h1>
                 <nav className="h-full">
                     <button

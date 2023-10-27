@@ -4,11 +4,10 @@ import {
     RiReactjsFill,
     RiHtml5Fill,
     RiCss3Fill,
-    RiAngularjsFill,
 } from "react-icons/ri"
 import { BiLogoTypescript } from "react-icons/bi"
 import { motion } from "framer-motion"
-import { OTHER_SKILLS, mainSkills, projects } from "./lib/data"
+import { FAVORITE_GAME, OTHER_SKILLS, mainSkills, projects } from "./lib/data"
 import Card from "./components/Card"
 import Chip from "./components/Chip"
 import Footer from "./components/Footer"
@@ -29,31 +28,41 @@ function App() {
                             animate={{ scale: 1 }}
                             transition={{ type: "spring", bounce: 0.75 }}
                             className="h-44 w-44 rounded-full border-8 border-red-500 md:h-64 md:w-64 "
-                            src="./paley.webp"
+                            src="./me.jpeg"
+                            alt="Picture of Layne Rigano"
                         />
                     </div>
                     <div className="text-white ">
                         {/* <p className="text-xl md:text-5xl">Alexandria Paley</p> */}
-                        <motion.p
-                            initial={{ x: 250, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            className="text-3xl md:text-5xl"
-                            transition={{ delay: 0.25 }}
-                        >
-                            Lorem, ipsum.
-                        </motion.p>
+                        <div className="flex gap-2">
+                            <motion.p
+                                initial={{ x: 250, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                className="text-3xl md:text-5xl"
+                                transition={{ delay: 0.25 }}
+                            >
+                                Hey!
+                            </motion.p>
+
+                            <motion.p
+                                initial={{ y: 250, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                className="text-3xl md:text-5xl"
+                                transition={{ delay: 0.5 }}
+                            >
+                                My names Layne!
+                            </motion.p>
+                        </div>
+
                         <br />
                         <motion.p
                             initial={{ y: 250, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.5 }}
+                            transition={{ delay: 0.75 }}
                             className="text-lg leading-10 md:text-xl"
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Alias ex, atque saepe odio fugiat enim earum
-                            dolore nisi reprehenderit totam accusamus voluptas
-                            aliquid ducimus iure doloribus recusandae fugit non!
-                            Officiis!
+                            Im a full-stack web developer who loves to have fun
+                            bulding websites and making projects.
                         </motion.p>
                     </div>
                 </section>
@@ -62,38 +71,39 @@ function App() {
                     id="about"
                 >
                     {/* <div className="text-red-500 text-4xl">About Me</div> */}
-                    <div className="text-4xl text-red-500">Quasi, placeat</div>
+                    <div className="text-4xl text-red-500">About Me</div>
                     <br />
                     <p className="text-lg leading-10">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Cumque possimus, distinctio, tempore blanditiis
-                        exercitationem earum, soluta quidem adipisci culpa animi
-                        ad optio! Ratione eos a iusto inventore impedit magnam
-                        earum aliquam, atque modi, quas, odit ex reprehenderit
-                        delectus rem alias. Sapiente voluptates facilis amet
-                        praesentium numquam odio eaque dolore dolorum
-                        voluptatibus, omnis hic! Esse autem voluptate quisquam!
-                        Odio provident velit fugit, magni totam debitis impedit
-                        repudiandae quidem maiores libero doloremque nemo
-                        quisquam, voluptates et autem aspernatur facilis illum,
-                        facere a porro odit laborum! Fugiat distinctio ratione
-                        officiis aliquam omnis fuga perferendis soluta corrupti
-                        inventore dolorum? Sint nam in alias dolores, laborum
-                        unde. Possimus vero provident nulla illo iste voluptatem
-                        nemo, vel pariatur numquam ab sapiente delectus in,
-                        minima amet culpa neque commodi soluta cupiditate sit
-                        officia repellendus totam quas voluptates consequuntur.
-                        Modi voluptatem quae vitae repellat est adipisci
-                        nesciunt itaque consequatur, sint maxime voluptates
-                        ipsum odit ab aliquam eaque assumenda expedita eum
-                        repellendus corrupti veritatis ratione magni
-                        perspiciatis distinctio quia. Accusantium et nostrum non
-                        modi atque impedit similique sunt, repudiandae ad
-                        dolorum unde cum necessitatibus laborum enim consectetur
-                        consequatur blanditiis reiciendis, qui praesentium vitae
-                        facilis magni? Dolorum sit ducimus, veniam sapiente, est
-                        nesciunt distinctio officiis tenetur dicta, blanditiis
-                        error quod!
+                        I am a full-stack web developer who mostly uses react
+                        currently, but sometimes I like to go back to the basics
+                        and use plain HTML, CSS, and JavaScript. I started to
+                        learn front-end web developent and self taught myself
+                        back in 2021. I began making very small websites with my
+                        friends. We would joke around and I have would have a
+                        good time making them. I then started to take web
+                        development seriously as I started to enjoy it more. I
+                        wanted to learn the newest things when it came to web
+                        development and was excited everytime I found something
+                        new. I started back-end development in late 2022 as I
+                        wanted to build more complex websites and apps. Learning
+                        backend web development felt so new to me and re-ignited
+                        the spark to keep me going and push forward through
+                        learning web development and learning to code.
+                        <br />I also love to play video games and spend a lot of
+                        the free time that I have either coding or playing
+                        games. Right now my favorite game is{" "}
+                        <span className="rounded-full bg-neutral-200 px-2 py-1 font-bold">
+                            {FAVORITE_GAME}
+                        </span>{" "}
+                        and I am always willing to try new things and play new
+                        games.
+                        <br />
+                        Working in projets with mulitple people is also
+                        something I enjoy. I find it so much easier to create
+                        something when there are amazing ideas coming from
+                        multiple people and enjoy giving others positive
+                        feedback and coming up with ideas that everyone will
+                        enjoy.
                     </p>
                 </section>
                 <section
@@ -153,29 +163,30 @@ function App() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 1.25 }}
                         >
-                            <RiAngularjsFill
-                                className="text-[#dd1b16]"
-                                size={64}
+                            <img
+                                className="w-[48px]"
+                                src="./firebase.svg"
+                                alt="firebase logo"
                             />
                         </motion.div>
                         {/* from #d0433f - to #a73a37 */}
                     </div>
                     <br />
                     <p className="text-lg leading-10">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nesciunt laboriosam libero, ullam nulla, nemo id
-                        assumenda possimus incidunt fugit veritatis dolorum
-                        recusandae neque laborum vitae qui. Nemo voluptate
-                        corrupti aspernatur! Amet vero at neque facere. Sint,
-                        aliquid. Similique minima veritatis dolore debitis
-                        excepturi praesentium sed inventore quod laboriosam,
-                        dolorum cumque soluta vitae iure est deleniti modi?
-                        Consequatur, debitis. Vel nulla porro animi voluptatem,
-                        accusantium beatae sunt eum earum reiciendis maxime a
-                        error tempore eaque ea ipsa. Sequi repellendus officiis
-                        amet et, placeat hic inventore voluptatibus? Porro, fuga
-                        dolor at laboriosam accusamus eligendi, nihil, fugit
-                        repellat beatae aliquid nulla. Distinctio, nostrum?
+                        I have spent a lot of time working in plain HTML, CSS,
+                        and JavaScript and have a powerful understanding of the
+                        languages and how to use them. I have recently switched
+                        to React and using JavaScript frameworks to better
+                        improve my workflow. I have a powerful knowledge in
+                        using React, Vite, NextJS, Astro, and many other
+                        frameworks that are similar. I love to learn new
+                        framworks all the time and see what are the best options
+                        for me as a web developer. I am always eager to learn
+                        more and will search for things that I haven't learned
+                        yet. I like to make sure my sites are accessablie for as
+                        many people as possible and spend a decent amount of
+                        time making sure people with disabilities are still able
+                        to interact with the websites that I build.
                     </p>
                     <br />
                     <div className="flex flex-col gap-5" id="main-skills">
@@ -236,32 +247,6 @@ function App() {
                                         </motion.li>
                                     )
                                 })}
-                                {/* <li>Accessible Web Design</li>
-                                <li>Apache</li>
-                                <li>Cybersecurity</li>
-                                <li>Electron</li>
-                                <li>Excel</li>
-                                <li>Firebase</li>
-                                <li>Git</li>
-                                <li>Github </li>
-                                <li>Java</li>
-                                <li>Kotlin</li>
-                                <li>Linux</li>
-                                <li>MongoDB</li>
-                                <li>NextJS</li>
-                                <li>Responsive Web Design</li>
-                                <li>NodeJS</li>
-                                <li>Photoshop</li>
-                                <li>PHP</li>
-                                <li>PostgreSQL</li>
-                                <li>Python</li>
-                                <li>Search Engine Optimization</li>
-                                <li>Server Management</li>
-                                <li>SQL</li>
-                                <li>Supabase</li>
-                                <li>TailwindCSS</li>
-                                <li>UI/UX Design</li>
-                                <li>Vercel</li> */}
                             </ul>
                         </div>
                     </div>
